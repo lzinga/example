@@ -8,6 +8,7 @@
 			"detail": "Imports the module locally for testing individual scripts that would require it without having logic in each script.",
 			"type": "shell",
 			"command": "${workspaceFolder}\\.vscode\\install-module-locally.ps1",
+			"args": [ "${workspaceFolder}", "MyModule" ],
 			"group": {
 				"kind": "build",
 				"isDefault": true

@@ -1,6 +1,11 @@
-$ScriptRoot = $PSScriptRoot
+param (
+    [System.IO.FileInfo] $WorkspaceFolder,
+    [string] $ModuleName
+)
 
-$source = "$ScriptRoot\..\Modules\MyModule"
+Write-Host "Workspace Folder: $WorkspaceFolder"
+
+$source = "$WorkspaceFolder\Modules\$ModuleName"
 $destination = "$env:ProgramFiles\WindowsPowerShell\Modules"
 
 Write-Host "Copying '$source' to '$destination'."
